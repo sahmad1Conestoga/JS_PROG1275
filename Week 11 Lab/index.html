@@ -47,6 +47,33 @@
                 <span class="error" id="dobError"></span>
             </div>
 
+            <!-- Part Dropdown -->
+            <div class="form-row">
+                <label for="partNumber">Part Number:</label>
+                <select id="partNumber">
+                <option value="0">--MUST SELECT--</option>
+                <option value="55D-26">Gribbly Gibbit</option>
+                <option value="X55-87">Fizzly Bing Bang</option>
+                <option value="BMB77-88">Bumblee Dumble</option>
+                <option value="WBF77-8">Wizbang Goozzle</option>
+                </select>
+                <span class="error" id="partError"></span>
+            </div>
+
+            <!-- Extended Warranty -->
+            <div class="form-row">
+                <label>Extended Warranty:</label>
+                <input type="radio" name="warranty" value="Yes"> Yes
+                <input type="radio" name="warranty" value="No"> No
+                <span class="error" id="warrantyError"></span>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="form-row">
+                <label></label>
+                <button type="button" onclick="validatePage()">Place Order</button>
+            </div>
+
 
         </form>
 
