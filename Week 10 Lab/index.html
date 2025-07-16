@@ -68,43 +68,50 @@
            favourite colour ...
       -->
       <P>Please complete the following information and when done, press the <B><I>Submit</I></B> button.</P>
-      <TABLE border="0" width="80%">
+      <TABLE border="10" width="75%">
         <TR>
-          <TD width="20%" align="right">First Name ?</TD>
+          <TD width="20%" align="right">Student Name ?</TD>
           <TD width="2%">&nbsp;</TD>
-          <TD width="58%" align="left"><INPUT type="text" size="15" placeholder="Joe" name="firstName" id="userFirst" /></TD>
-        </TR>
-        <TR>
-          <TD align="right">Last Name ?</TD>
-          <TD></TD>
-          <TD align="left"><INPUT type="text" size="15" placeholder="Student" name="lastName" id="userLast" /></TD>
-        </TR>
-        <TR>
-          <TD align="right">Your Age ?</TD>
-          <TD></TD>
-          <TD align="left">
-            <SELECT name="ageRange" id="userAge">
-              <OPTION value="0">--Select Age Range--</OPTION>
-              <OPTION value="1"> 1 to 10 years</OPTION>
-              <OPTION value="2">11 to 20 years</OPTION>
-              <OPTION value="3">21 to 30 years</OPTION>
-              <OPTION value="4">31 to 40 years</OPTION>
-              <OPTION value="5">41 to 50 years</OPTION>
-              <OPTION value="6">51 to 60 years</OPTION>
-            </SELECT>
+          <TD width="38%" align="left"><INPUT type="text" size="20" maxlength="20" placeholder="Sally Struthers" name="studentName" id="studentNM" /></TD>
+          <TD width="35%" align="left">
+            <span id="”nameErr”" style="color: red;"></span>
           </TD>
         </TR>
         <TR>
-          <TD align="right">Favourite Colour ?</TD>
+          <TD align="right">Student Number ?</TD>
+          <TD></TD>
+          <TD align="left"><INPUT type="text" size="20" placeholder="8952647" name="studentNumber" id="studentID" /></TD>
+          <TD align="left">
+            <span id="numberErr" style="color: red;"></span>
+          </TD>
+        </TR>
+        <TR>
+          <TD align="right">School Attending ?</TD>
           <TD></TD>
           <TD align="left">
-            <INPUT type="radio" name="colour" value="red"/>red&nbsp;
-            <INPUT type="radio" name="colour" value="yellow"/>yellow&nbsp;
-            <INPUT type="radio" name="colour" value="pink"/>pink&nbsp;
-            <INPUT type="radio" name="colour" value="green"/>green&nbsp;
-            <INPUT type="radio" name="colour" value="orange"/>orange&nbsp;
-            <INPUT type="radio" name="colour" value="purple"/>purple&nbsp;
-            <INPUT type="radio" name="colour" value="blue"/>blue
+            <SELECT name="studentSchool" id="studentSC">
+              <OPTION value="0">--Select School--</OPTION>
+              <OPTION value="1"> Applied Computer Science and IT</OPTION>
+              <OPTION value="2">Business</OPTION>
+              <OPTION value="3">Hospitality and Culinary Arts</OPTION>
+              <OPTION value="4">Trades and Apprenticeship</OPTION>
+              <OPTION value="5">Engineering and Technology</OPTION>
+              <OPTION value="6">ealth and Life Sciences</OPTION>
+            </SELECT>
+          </TD>
+          <TD align="left">
+            <span id="schoolErr" style="color: red;"></span>
+          </TD>
+        </TR>
+        <TR>
+          <TD align="right">Student Type ?</TD>
+          <TD></TD>
+          <TD align="left">
+            <INPUT type="radio" name="studentType" value="domestic"/>domestic&nbsp;
+            <INPUT type="radio" name="studentType" value="international"/>international&nbsp;
+          </TD>
+          <TD align="left">
+            <span id="studentTypeErr" style="color: red;"></span>
           </TD>
         </TR>
         <TR>
@@ -123,7 +130,7 @@
       </table>
 
       <br/>
-      <div id="userFeedback" style="color:red;"></div>
+      
     </FORM>
   </BODY>
 </HTML>
