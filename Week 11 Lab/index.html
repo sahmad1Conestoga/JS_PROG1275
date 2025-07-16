@@ -3,6 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <title>Week 11</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            padding: 30px;
+        }
+
+        #formContainer{
+            max-width: 600px;
+        }
+
+        .form-row{
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .form-row.error{
+            margin-left: 15px;
+            color: red;
+            font-size: 0.9em;
+        }
+
+    </style>
 </head>
 <body>
     <h1>Place your Order</h1>
@@ -10,12 +33,21 @@
     <div id="formContainer">
         <form id=orderForm"">
             
-            <div class="">
+            <!--Fullname-->
+            <div class="form-row">
                 <label for="fullName">Full Name: </label>
-                <input type="text" id="fullName" maxlength="20">
+                <input type="text" id="fullName" maxlength="20">    
                 <span class="error" id="nameError"></span>
             </div>
-            
+
+            <!--DOB-->
+            <div class="form-row">
+                <label for="dob">Date of Birth (YYYY-MM-DD): </label>
+                <input type="text" id="dob" maxlength="11">    
+                <span class="error" id="dobError"></span>
+            </div>
+
+
         </form>
 
 
