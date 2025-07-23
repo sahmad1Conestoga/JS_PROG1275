@@ -18,6 +18,8 @@
         let studentTypeSelected = "NONE";
         let shouldSubmit = true;    // let's assume that I will submit
 
+
+
         // do a little pre-processing of the form data - checking which radio button has been selected for colour
         if (document.FirstForm.studentType[0].checked == true) { studentTypeSelected = "domestic"; }
         if (document.FirstForm.studentType[1].checked == true) { studentTypeSelected = "international"; }
@@ -26,26 +28,33 @@
         // first let's do some user input level validation ... according to my form, all input fields are mandatory
         if ((document.getElementById("studentNM").value == "") || (document.getElementById("studentID").value == "") || (document.getElementById("studentSC").value == "0") || (studentTypeSelected == "NONE"))
         {
-		        var errMsg= "Sorry ... All fields in the form are <b>MANDATORY</b>."
+		        let errMsg= ""
+            document.getElementById("nameErr").innerHTML = ""
+            document.getElementById("numberErr").innerHTML = ""
+            document.getElementById("schoolErr").innerHTML = ""
+            document.getElementById("studentTypeErr").innerHTML = ""
 		        // tell the user which fields are not complete
+
+            errMsg = "Sorry ... All fields in the form are MANDATORY <br>"
+            document.getElementById("nameErr").innerHTML = errMsg
         
             if (document.getElementById("studentNM").value == ""){
-              errMsg = errMsg + "<i>Student Name is MISSING</i>"
+              errMsg = "<i>Student Name is MISSING</i>"
               document.getElementById("nameErr").innerHTML = errMsg;
             }
 
             if (document.getElementById("studentID").value == ""){
-              errMsg = errMsg + "<i>Student ID is MISSING</i>"
+              errMsg = "<i>Student ID is MISSING</i>"
               document.getElementById("numberErr").innerHTML = errMsg;
             }
 
             if (document.getElementById("studentSC").value == "0"){
-              errMsg = errMsg + "<i>Student school is MISSING</i>"
+              errMsg = "<i>Student school is MISSING</i>"
               document.getElementById("schoolErr").innerHTML = errMsg;
             }
 
             if (studentTypeSelected == "NONE"){
-              errMsg = errMsg + "<i>Student Type is MISSING</i>"
+              errMsg = "<i>Student Type is MISSING</i>"
               document.getElementById("studentTypeErr").innerHTML = errMsg;
             }
             
